@@ -1,12 +1,12 @@
 import { UserOutlined } from '@ant-design/icons';
-import { Avatar, Layout, Menu } from 'antd';
+import { Avatar, Button, Layout, Menu } from 'antd';
 import React from 'react';
 import { useLocation, useNavigate } from "react-router-dom";
 const { Footer, Sider, Content } = Layout;
 
 const LayoutAuthenticated = (props) => {
   const navigate = useNavigate();
-  const {state} = useLocation();
+  const { state } = useLocation();
   const navItem = [
     {
       label: 'Apartment List',
@@ -56,6 +56,9 @@ const LayoutAuthenticated = (props) => {
           }}
           items={items}
         />
+        <div style={{ paddingLeft: '10px', paddingRight: '10px' }}>
+          <Button shape='round' block danger style={{ marginTop: '10px' }}>Logout</Button>
+        </div>
       </Sider>
       <Layout>
         <Content>{props.children}</Content>
