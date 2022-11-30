@@ -61,7 +61,7 @@ const LayoutAuthenticated = (props) => {
         </div>
       </Sider>
       <Layout>
-        <Content>{props.children}</Content>
+        <Content style={{ padding: '40px 50px' }}>{props.children}</Content>
         <Footer>Footer</Footer>
       </Layout>
     </Layout>
